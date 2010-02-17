@@ -84,7 +84,7 @@ public class PamLibrary {
 			@JniArg(cast="pam_handle_t *") long pamh,
 			@JniArg(cast="const char *", flags=CRITICAL) String module_data_name,
 		 	@JniArg(cast="void *") long data,
-		 	@JniArg(cast="void (*cleanup)(pam_handle_t *pamh, void *data, int pam_end_status)") long cleanup);
+		 	@JniArg(cast="void *") long cleanup);
 
     // TODO: the third argument may be a pam_conv struct
 	public static final native int pam_set_item(
@@ -99,7 +99,7 @@ public class PamLibrary {
 	public static final native int pam_start(
 			@JniArg(cast="const char *", flags=CRITICAL) String service, 
 			@JniArg(cast="const char *", flags=CRITICAL) String user, 
-		 	@JniArg pam_conv pam_conv, 
+		 	@JniArg(flags = NO_OUT) pam_conv pam_conv, 
 			@JniArg(cast="pam_handle_t **", flags={NO_IN, CRITICAL}) long[] pamh);
 
 	@JniMethod(accessor="pam_strerror")
@@ -112,7 +112,7 @@ public class PamLibrary {
 		return toString(__pam_strerror(pamh, error_number));
 	}
 
-    @JniClass(flags={ClassFlag.STRUCT,TYPEDEF}, conditional="defined(HAVE_SECURITY_PAM_APPL_H)")
+    @JniClass(flags=STRUCT, conditional="defined(HAVE_SECURITY_PAM_APPL_H)")
     public static class pam_conv { 
         static {
             LIBRARY.load();
@@ -121,8 +121,13 @@ public class PamLibrary {
         
         @JniMethod(flags={CONSTANT_INITIALIZER})
         public static final native void init();
-        @JniField(flags={CONSTANT}, accessor="sizeof(pam_conv)")
+        @JniField(flags={CONSTANT}, accessor="sizeof(struct pam_conv)")
         public static int SIZEOF;
+
+        public long conv;
+
+        @JniField(accessor = "appdata_ptr")
+        public long data;
 
 	}
 

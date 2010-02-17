@@ -41,7 +41,7 @@
 #endif
 
 #ifdef HAVE_SECURITY_PAM_APPL_H
-  #include <system/pam_appl.h>
+  #include <security/pam_appl.h>
 #endif
 
 #endif /* JLIBPAM_H */
