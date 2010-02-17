@@ -17,8 +17,31 @@
 #ifndef JLIBPAM_H
 #define JLIBPAM_H
 
-#ifdef HAVE_SECURITY_PAM_APPL_H
-	#include <system/pam_appl.h>
+#ifdef HAVE_CONFIG_H
+  /* configure based build.. we will use what it discovered about the platform */
+  #include "config.h"
+#else
+  #ifdef WIN32
+    /* Windows based build */
+    #define HAVE_STDLIB_H 1
+    #define HAVE_STRINGS_H 1
+  #endif
 #endif
 
-#endif /* JANSI_H */
+#ifdef HAVE_UNISTD_H
+  #include <unistd.h>
+#endif
+
+#ifdef HAVE_STDLIB_H
+  #include <stdlib.h>
+#endif
+
+#ifdef HAVE_STRINGS_H
+  #include <string.h>
+#endif
+
+#ifdef HAVE_SECURITY_PAM_APPL_H
+  #include <system/pam_appl.h>
+#endif
+
+#endif /* JLIBPAM_H */

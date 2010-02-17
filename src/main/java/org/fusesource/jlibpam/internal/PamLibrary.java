@@ -18,7 +18,7 @@ public class PamLibrary {
 	}
 
     @JniMethod(flags={CONSTANT_INITIALIZER})
-    private static final native void init();
+    public static final native void init();
 
     @JniField(flags={CONSTANT})
     public static short PAM_AUTHTOK;
@@ -60,7 +60,7 @@ public class PamLibrary {
 			const char *prompt);
 */
 	@JniMethod(accessor="pam_getenv")
-    private static final native long __pam_getenv(
+    public static final native long __pam_getenv(
 			@JniArg(cast="pam_handle_t *") long pamh,
 			@JniArg(cast="const char *", flags=CRITICAL) String name);
 			
@@ -96,14 +96,14 @@ public class PamLibrary {
 			@JniArg(cast="pam_handle_t *") long pamh,
 			int flags);
 
-	private static final native int pam_start(
+	public static final native int pam_start(
 			@JniArg(cast="const char *", flags=CRITICAL) String service, 
 			@JniArg(cast="const char *", flags=CRITICAL) String user, 
 		 	@JniArg pam_conv pam_conv, 
 			@JniArg(cast="pam_handle_t **", flags={NO_IN, CRITICAL}) long[] pamh);
 
 	@JniMethod(accessor="pam_strerror")
-	private static final native long __pam_strerror(
+	public static final native long __pam_strerror(
 			@JniArg(cast="pam_handle_t *") long pamh,
 			@JniArg int error_number
 			);
@@ -120,21 +120,21 @@ public class PamLibrary {
         }
         
         @JniMethod(flags={CONSTANT_INITIALIZER})
-        private static final native void init();
+        public static final native void init();
         @JniField(flags={CONSTANT}, accessor="sizeof(pam_conv)")
         public static int SIZEOF;
 
 	}
 
-    private static final native void memmove(
+    public static final native void memmove(
             @JniArg(cast="void *", flags={NO_OUT, CRITICAL}) byte[] dest, 
             @JniArg(cast="const void *") long src, 
             @JniArg(cast="size_t") long size);
 	
-	private static final native int strlen(
+	public static final native int strlen(
 			@JniArg(cast="const char *") long ptr);
 
-	private static String toString(long ptr) {
+	public static String toString(long ptr) {
 		if (ptr == 0) {
 			return null;
 		}
