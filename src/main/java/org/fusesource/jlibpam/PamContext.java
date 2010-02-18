@@ -26,7 +26,7 @@ import static org.fusesource.jlibpam.internal.CLibrary.*;
 import static org.fusesource.jlibpam.internal.PamLibrary.*;
 
 /**
- * PAM access
+ * PAM context for low level access
  *
  * @author <a href="mailto:gnodet[at]gmail.com">Guillaume Nodet</a>
  */
