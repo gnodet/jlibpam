@@ -15,160 +15,161 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.fusesource.jlibpam</groupId>
-  <artifactId>jlibpam</artifactId>
-  <packaging>jar</packaging>
-  
-  <name>jlibpam</name>
-  <version>1.0-SNAPSHOT</version>
-  <description>jlibpam is a java library to access the PAM security bits of the OS.</description>
-  <url>http://jlibpam.fusesource.org</url>
-	
-  <inceptionYear>2002</inceptionYear>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.fusesource.jlibpam</groupId>
+    <artifactId>jlibpam</artifactId>
+    <packaging>jar</packaging>
 
-  <issueManagement>
-    <system>jira</system>
-    <url>http://fusesource.com/issues/browse/JLIBPAM</url>
-  </issueManagement>
-    
-  <mailingLists>
-    <mailingList>
-      <name>jlibpam dev</name>
-      <post>jlibpam-dev@fusesource.org</post>
-      <subscribe>jlibpam-dev-subscribe@fusesource.org</subscribe>
-    </mailingList>
-    <mailingList>
-      <name>jlibpam commits</name>
-      <post>jlibpam-commits@fusesource.org</post>
-      <subscribe>jlibpam-commits-subscribe@fusesource.org</subscribe>
-    </mailingList>
-  </mailingLists>
+    <name>jlibpam</name>
+    <version>1.0-SNAPSHOT</version>
+    <description>jlibpam is a java library to access the PAM security bits of the OS.</description>
+    <url>http://jlibpam.fusesource.org</url>
 
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  
-  <scm>
-    <connection>scm:git:git://forge.fusesource.com/jlibpam.git</connection>
-    <developerConnection>scm:git:ssh://git@forge.fusesource.com/jlibpam.git</developerConnection>
-    <url>http://fusesource.com/forge/gitweb?p=jlibpam.git</url>
-  </scm>
-  
-  <distributionManagement>
-    <repository>
-      <id>release.fusesource.org</id>
-      <name>JLibPam Release Repository</name>
-      <url>dav:http://fusesource.com/forge/dav/jlibpam/repo/release</url>
-    </repository>
-    <snapshotRepository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>snapshot.fusesource.org</id>
-      <name>JLibPam Snapshot Repository</name>
-      <url>dav:http://fusesource.com/forge/dav/jlibpam/repo/snapshot</url>
-    </snapshotRepository>
-    <site>
-      <id>website.fusesource.org</id>
-      <name>website</name>
-      <url>dav:http://fusesource.com/forge/dav/jlibpam/maven/${project.version}</url>
-    </site>
-  </distributionManagement>  
-  
-  <repositories>
-    <!-- For hawtjni -->
-    <repository>
-      <id>hawtjni.snapshot.fusesource.org</id>
-      <name>HawtJNI Snapshot Repo</name>
-      <url>http://hawtjni.fusesource.org/repo/snapshot</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>    
-  </repositories>
-  <pluginRepositories>
-    <!-- For the Uberize plugin -->
-    <pluginRepository>
-      <id>mvnplugins.release.fusesource.org</id>
-      <name>MeshKeeper Snapshot Repo</name>
-      <url>http://mvnplugins.fusesource.org/repo/release</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>hawtjni.snapshot.fusesource.org</id>
-      <name>HawtJNI Snapshot Repo</name>
-      <url>http://hawtjni.fusesource.org/repo/snapshot</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
+    <inceptionYear>2002</inceptionYear>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <issueManagement>
+        <system>jira</system>
+        <url>http://fusesource.com/issues/browse/JLIBPAM</url>
+    </issueManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.fusesource.hawtjni</groupId>
-      <artifactId>hawtjni-runtime</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.7</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+    <mailingLists>
+        <mailingList>
+            <name>jlibpam dev</name>
+            <post>jlibpam-dev@fusesource.org</post>
+            <subscribe>jlibpam-dev-subscribe@fusesource.org</subscribe>
+        </mailingList>
+        <mailingList>
+            <name>jlibpam commits</name>
+            <post>jlibpam-commits@fusesource.org</post>
+            <subscribe>jlibpam-commits-subscribe@fusesource.org</subscribe>
+        </mailingList>
+    </mailingLists>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-webdav-jackrabbit</artifactId>
-        <version>1.0-beta-5</version>
-      </extension>
-    </extensions>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-    <plugins>
-      <!-- the older clean plugin has trouble deleting directories with symlinks in them -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>2.3</version>
-      </plugin>
+    <scm>
+        <connection>scm:git:git://forge.fusesource.com/jlibpam.git</connection>
+        <developerConnection>scm:git:ssh://git@forge.fusesource.com/jlibpam.git</developerConnection>
+        <url>http://fusesource.com/forge/gitweb?p=jlibpam.git</url>
+    </scm>
 
-		      <plugin>
-		        <groupId>org.fusesource.hawtjni</groupId>
-		        <artifactId>maven-hawtjni-plugin</artifactId>
-		        <version>1.0-SNAPSHOT</version>
-		        <executions>
-		          <execution>
-		            <goals>
-		              <goal>generate</goal>
-		              <goal>build</goal>
-		              <goal>package-jar</goal>
-		              <goal>package-source</goal>
-		            </goals>
-		            <configuration>
-		              <copyright><![CDATA[
+    <distributionManagement>
+        <repository>
+            <id>release.fusesource.org</id>
+            <name>JLibPam Release Repository</name>
+            <url>dav:http://fusesource.com/forge/dav/jlibpam/repo/release</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>snapshot.fusesource.org</id>
+            <name>JLibPam Snapshot Repository</name>
+            <url>dav:http://fusesource.com/forge/dav/jlibpam/repo/snapshot</url>
+        </snapshotRepository>
+        <site>
+            <id>website.fusesource.org</id>
+            <name>website</name>
+            <url>dav:http://fusesource.com/forge/dav/jlibpam/maven/${project.version}</url>
+        </site>
+    </distributionManagement>
+
+    <repositories>
+        <!-- For hawtjni -->
+        <repository>
+            <id>hawtjni.snapshot.fusesource.org</id>
+            <name>HawtJNI Snapshot Repo</name>
+            <url>http://hawtjni.fusesource.org/repo/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <!-- For the Uberize plugin -->
+        <pluginRepository>
+            <id>mvnplugins.release.fusesource.org</id>
+            <name>MeshKeeper Snapshot Repo</name>
+            <url>http://mvnplugins.fusesource.org/repo/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>hawtjni.snapshot.fusesource.org</id>
+            <name>HawtJNI Snapshot Repo</name>
+            <url>http://hawtjni.fusesource.org/repo/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.fusesource.hawtjni</groupId>
+            <artifactId>hawtjni-runtime</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>1.0-beta-5</version>
+            </extension>
+        </extensions>
+
+        <plugins>
+            <!-- the older clean plugin has trouble deleting directories with symlinks in them -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.fusesource.hawtjni</groupId>
+                <artifactId>maven-hawtjni-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                            <goal>build</goal>
+                            <goal>package-jar</goal>
+                            <goal>package-source</goal>
+                        </goals>
+                        <configuration>
+                            <copyright><![CDATA[
 		/*******************************************************************************
 		 * Copyright (C) 2010, Progress Software Corporation and/or its 
 		 * subsidiaries or affiliates.  All rights reserved.
@@ -186,153 +187,156 @@
 		 * limitations under the License.
 		 *******************************************************************************/
 		              ]]></copyright>
-		            </configuration>
-		          </execution>
-		        </executions>        
-		      </plugin>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
-		      <!-- include all the dependencies into the jar so it can run standalone -->
-		      <plugin>
-		        <groupId>org.fusesource.mvnplugins</groupId>
-		        <artifactId>maven-uberize-plugin</artifactId>
-		        <version>1.4</version>
-		        <executions>
-		          <execution>
-		            <phase>package</phase>
-		            <goals><goal>uberize</goal></goals>
-		            <configuration>
+            <!-- include all the dependencies into the jar so it can run standalone -->
+            <plugin>
+                <groupId>org.fusesource.mvnplugins</groupId>
+                <artifactId>maven-uberize-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>uberize</goal>
+                        </goals>
+                        <configuration>
 
-		              <transformers>
-		                <!-- Make an executable jar -->
-		                <transformer implementation="org.fusesource.mvnplugins.uberize.transformer.ManifestEditor">
-		                  <manifestEntries>
-		                    <Main-Class>test.Platform</Main-Class>
-		                    <Specification-Version>${pom.version}</Specification-Version>
-		                    <Implementation-Version>${pom.version}</Implementation-Version>
-		                  </manifestEntries>
-		                </transformer>
-		              </transformers>
-		            </configuration>
-		          </execution>
-		        </executions>
-		      </plugin>
+                            <transformers>
+                                <!-- Make an executable jar -->
+                                <transformer
+                                        implementation="org.fusesource.mvnplugins.uberize.transformer.ManifestEditor">
+                                    <manifestEntries>
+                                        <Main-Class>test.Platform</Main-Class>
+                                        <Specification-Version>${pom.version}</Specification-Version>
+                                        <Implementation-Version>${pom.version}</Implementation-Version>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
-		      <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>2.4.3</version>
-		        <configuration>
-		            <redirectTestOutputToFile>true</redirectTestOutputToFile>
-		            <forkMode>once</forkMode>
-		            <argLine>-ea</argLine>
-		            <failIfNoTests>false</failIfNoTests>
-		            <workingDirectory>${project.build.directory}</workingDirectory>
-		            <excludes>
-		                <exclude>**/Abstract*.java</exclude>
-		                <exclude>**/Test*.java</exclude>
-		            </excludes>
-		            <includes>
-		                <include>**/*Test.java</include>
-		            </includes>
-		        </configuration>
-		      </plugin>
-		      <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-compiler-plugin</artifactId>
-		        <configuration>
-		          <source>1.5</source>
-		          <target>1.5</target>
-		        </configuration>
-		      </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.3</version>
+                <configuration>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <forkMode>once</forkMode>
+                    <argLine>-ea</argLine>
+                    <failIfNoTests>false</failIfNoTests>
+                    <workingDirectory>${project.build.directory}</workingDirectory>
+                    <excludes>
+                        <exclude>**/Abstract*.java</exclude>
+                        <exclude>**/Test*.java</exclude>
+                    </excludes>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
 
-		      <plugin>
-		        <groupId>org.apache.felix</groupId>
-		        <artifactId>maven-bundle-plugin</artifactId>
-		        <version>2.0.1</version>
-		        <executions>
-		          <execution>
-		            <id>bundle-manifest</id>
-		            <phase>process-classes</phase>
-		            <goals>    
-		              <goal>manifest</goal>
-		            </goals>   
-		            <configuration>
-		              <instructions>
-		                  <Import-Package>!org.fusesource.jlibpam*,*</Import-Package>
-		              </instructions>
-		            </configuration>
-		          </execution>
-		        </executions>
-		      </plugin>
-		      <plugin>
-		        <artifactId>maven-jar-plugin</artifactId>
-		        <configuration>
-		          <archive>  
-		            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-		          </archive> 
-		        </configuration>
-		      </plugin> 
-		 
-		      <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-scm-plugin</artifactId>
-		        <dependencies>
-		          <dependency>
-		            <groupId>org.apache.maven.scm</groupId>
-		            <artifactId>maven-scm-provider-gitexe</artifactId>
-		            <version>1.2</version>
-		          </dependency>
-		        </dependencies>
-		      </plugin>      
-		    </plugins>
-		  </build>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.0.1</version>
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                        <configuration>
+                            <instructions>
+                                <Import-Package>!org.fusesource.jlibpam*,*</Import-Package>
+                            </instructions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
 
-		  <reporting>
-		    <plugins>
-		      <plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>jxr-maven-plugin</artifactId>
-		        <configuration>
-		          <aggregate>true</aggregate>
-		        </configuration>
-		      </plugin>
-		      <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-javadoc-plugin</artifactId>
-		        <configuration>
-		          <excludePackageNames>*.internal</excludePackageNames>
-		          <aggregate>true</aggregate>
-		          <linksource>true</linksource>
-		          <links>
-		            <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
-		            <link>https://jna.dev.java.net/nonav/javadoc</link>
-		          </links>
-                  <show>public</show>
-		        </configuration>
-		      </plugin>
-		      <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-pmd-plugin</artifactId>
-		      </plugin>
-		      <plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-project-info-reports-plugin</artifactId>
-		        <reportSets>
-		          <reportSet>
-		            <reports>
-		              <report>mailing-list</report>
-		              <report>issue-tracking</report>
-		              <report>license</report>
-		              <report>scm</report>
-		            </reports>
-		          </reportSet>
-		        </reportSets>
-		      </plugin>
-		      <plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>surefire-report-maven-plugin</artifactId>
-		      </plugin>
-		    </plugins>
-		  </reporting>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.2</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jxr-maven-plugin</artifactId>
+                <configuration>
+                    <aggregate>true</aggregate>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <excludePackageNames>*.internal</excludePackageNames>
+                    <aggregate>true</aggregate>
+                    <linksource>true</linksource>
+                    <links>
+                        <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
+                        <link>https://jna.dev.java.net/nonav/javadoc</link>
+                    </links>
+                    <show>public</show>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>mailing-list</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>scm</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>surefire-report-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>	
