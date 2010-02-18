@@ -17,6 +17,17 @@ dnl ---------------------------------------------------------------------------
 
 AC_DEFUN([CUSTOM_M4_SETUP],
 [
-	AC_CHECK_HEADERS([security/pam_appl.h])
+    AC_CHECK_HEADER([security/pam_appl.h],[
+        AC_CHECK_LIB([pam], [pam_start],[
+            LDFLAGS="$LDFLAGS -lpam"
+            AC_DEFINE([HAVE_SECURITY_PAM_APPL_H], [1], [Define to 1 if you have the <security/pam_appl.h> header file.])
+            AC_CHECK_FUNCS(pam_getenvlist)
+            AC_CHECK_FUNCS(pam_putenv)
+            break
+        ])
+    ])
+
+    AC_CHECK_HEADER([sys/errno.h],[AC_DEFINE([HAVE_SYS_ERRNO_H], [1], [Define to 1 if you have the <sys/errno.h> header file.])])
+
 ])
 

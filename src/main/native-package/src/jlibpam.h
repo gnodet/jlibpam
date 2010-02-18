@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (C) 2009, Progress Software Corporation and/or its 
+ * Copyright (C) 2010, Progress Software Corporation and/or its
  * subsidiaries or affiliates.  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,5 +43,11 @@
 #ifdef HAVE_SECURITY_PAM_APPL_H
   #include <security/pam_appl.h>
 #endif
+
+#ifdef HAVE_SYS_ERRNO_H
+  #include <sys/errno.h>
+#endif
+
+#define add(value1, value2) ((value1)+value2)
 
 #endif /* JLIBPAM_H */
