@@ -308,7 +308,7 @@ public class PamLibrary {
      * const char * pam_getenv(pam_handle_t *pamh, const char *name)
      * </pre></code>
      */
-	@JniMethod
+	@JniMethod(cast="const char *")
     public static final native long pam_getenv(
 			@JniArg(cast="pam_handle_t *") long pamh,
 			@JniArg(cast="const char *", flags=CRITICAL) String name);
@@ -318,7 +318,7 @@ public class PamLibrary {
      * char ** pam_getenvlist(pam_handle_t * pamh);
      * </pre></code>
      */
-    @JniMethod(conditional = "defined(HAVE_PAM_GETENVLIST)")
+    @JniMethod(conditional = "defined(HAVE_PAM_GETENVLIST)", cast="char **")
     public static final native long pam_getenvlist(
             @JniArg(cast="pam_handle_t *") long pamh);
 
@@ -405,7 +405,7 @@ public class PamLibrary {
      * const char * pam_strerror(const pam_handle_t *pamh, int error_number);
      * </pre></code>
      */
-	@JniMethod
+	@JniMethod(cast="const char *")
 	public static final native long pam_strerror(
 			@JniArg(cast="pam_handle_t *") long pamh,
 			@JniArg int error_number
