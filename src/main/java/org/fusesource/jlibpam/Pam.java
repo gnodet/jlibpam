@@ -35,7 +35,7 @@ public final class Pam {
      * @param password the user password
      * @throws PamException if an error occurs or the authentication fails
      */
-    public void authenticate(String system, String user, String password) throws PamException {
+    public static void authenticate(String system, String user, String password) throws PamException {
         PamContext pam = new PamContext(system, user);
         try {
             pam.setItem(PamContext.Item.AuthToken, password);
